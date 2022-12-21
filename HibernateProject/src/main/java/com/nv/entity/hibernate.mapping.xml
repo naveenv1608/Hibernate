@@ -2,7 +2,9 @@
 <!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="com.nv.entity.Product" table="PRODUCT">
-		<id name="pid" column="PID"></id>
+		<id name="pid" column="PID">
+			<generator class="increment"/>
+		</id>
 		<property name="pname" column="PNAME"></property>
 		<property name="price" column="PRICE"></property>
 		<property name="qty" column="QUANTITY"></property>

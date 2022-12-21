@@ -28,8 +28,8 @@ public class SelectTest {
 			prod.setPrice(50f);
 			prod.setQty(10f);
 
-			ses.save(prod);
-
+			Integer idVal=(Integer) ses.save(prod);
+            System.out.println("ID value"+idVal);
 			txn.commit();
 			System.out.println("Record Inserted Successfully");
 
